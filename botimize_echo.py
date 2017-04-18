@@ -31,12 +31,13 @@ def handle_incoming_messages():
     #outgoing
     sender = data['entry'][0]['messaging'][0]['sender']['id']
     message = data['entry'][0]['messaging'][0]['message']['text']
-    reply(sender, message[::-1])
+    reply(sender, message)
     data_out = {
         "recipient": {"id": sender},
-        "message": {"text": message[::-1]}
+        "message": {"text": message}
     }
     botimize.log_outgoing(data_out)
+    return "ok"
  
 if __name__ == '__main__':
     app.run(debug=True)
