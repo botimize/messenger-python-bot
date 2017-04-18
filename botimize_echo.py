@@ -1,7 +1,9 @@
-from flask import Flask, request
+import os
 import requests
-from botimize import Botimize
- 
+
+from botimize import Botimize 
+from flask import Flask, request
+
 app = Flask(__name__)
  
 ACCESS_TOKEN = 'EAAYZCSs2uV0sBAFvOcMBGPOtSzTnEJQ6Jpp36UFZC40qcH0noQSiWubjTzkOvyfU1uOQfH7ZCYb5mrZApv72WEWDjBCBpwyn7bKnMNhKGByZCzZAnLZCQMk9ZCbsOrWnLkddKc9lLCdSOC2OlYzFBiZAoSAMkNMM8XZC1OQXdt9yFcTAZDZD' 

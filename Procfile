@@ -1,1 +1,1 @@
-web: python botimize_echo.py
+web: gunicorn botimize_echo:app --log-file=-
