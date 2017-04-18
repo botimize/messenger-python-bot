@@ -17,6 +17,8 @@ def reply(user_id, msg):
  
 @app.route('/', methods=['GET','POST'])
 def handle_incoming_messages():
+    return request.args['hub.challenge']
+
     # incoming
     data = request.json
     botimize.log_incoming(data)
@@ -30,7 +32,6 @@ def handle_incoming_messages():
         "message": {"text": message}
     }
     botimize.log_outgoing(data_out)
-    return request.args['hub.challenge']
  
 if __name__ == '__main__':
     app.run(debug=True)
