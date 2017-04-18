@@ -34,7 +34,7 @@ def handle_incoming_messages():
     reply(sender, message[::-1])
     data_out = {
         "recipient": {"id": sender},
-        "message": {"text": message}
+        "message": {"text": message[::-1]}
     }
     botimize.log_outgoing(data_out)
  
