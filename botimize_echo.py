@@ -15,7 +15,7 @@ def reply(user_id, msg):
     resp = requests.post("https://graph.facebook.com/v2.6/me/messages?access_token=" + ACCESS_TOKEN, json=data)
     print(resp.content)
  
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET','POST'])
 def handle_incoming_messages():
     # incoming
     data = request.json
@@ -30,7 +30,7 @@ def handle_incoming_messages():
         "message": {"text": message}
     }
     botimize.log_outgoing(data_out)
-    return "ok"
+    return request.args['hub.challenge']
  
 if __name__ == '__main__':
     app.run(debug=True)
