@@ -144,4 +144,4 @@ Record the https://your_app_name.herokuapp.com url.
 
 Set up the webhook by pasting https://your_app_name.herokuapp.com into the field and subscribe to your page.
 ![webhook](/demo/webhook.png)
-Now you can talk to your bot.
+Now you can talk to your bot!
