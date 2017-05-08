@@ -138,5 +138,10 @@ heroku create
 git push heroku master
 ```
 
+Record the https://your_app_name.herokuapp.com url.
+
 ## Talk to your bot
-Update the webhook url with heroku webhook.
+
+Set up the webhook by pasting https://your_app_name.herokuapp.com into the field and subscribe to your page.
+![webhook](/demo/webhook.png)
+Now you can talk to your bot.
