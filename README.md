@@ -47,9 +47,9 @@ pip install -r requirements.txt
 
 First, go to [facebook developer dashboard](https://developers.facebook.com/apps)
 
-Click ** +Add a New App **
+Click **+Add a New App**
 
-In the project dashboard, click ** +Add Project ** and click ** Messagner **.
+In the project dashboard, click **+Add Project** and click **Messagner**.
 
 Second, generage your Your_Facebook_Access_Token by selecting a page (if you don't have a facebook page then create one).
 
