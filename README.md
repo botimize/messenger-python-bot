@@ -10,11 +10,10 @@ Messanger uses the web server to receive and send the message(text, emoji, pic).
 
 You can easily git clone the whole project, setting up the dependency by running ```pip install -r requirements.txt```, and run the server somewhere else e.g. heroku.
 
-## Create heroku account and setup dependency
+## Create a heroku account
+Sign up an heroku account at https://www.heroku.com.
 
-### Sign up an heroku account at https://www.heroku.com.
-
-### Set up the dependency
+## Set up the dependency
 
 Create a requirements.txt with following lines in the requirements.txt
 ```
@@ -44,8 +43,7 @@ Install package by running
 pip install -r requirements.txt
 ```
 
-## Create Facebook App
-Create your facebook app and page
+## Create your Facebook App and Page
 First, go to [facebook developer dashboard](https://developers.facebook.com/apps)
 Click **+Add a New App**
 
@@ -53,12 +51,10 @@ In the project dashboard, click **+Add Project** and click **Messagner**.
 
 Second, generage your Your_Facebook_Access_Token by selecting a page (if you don't have a facebook page then create one).
 
-## Create a botimize account and generate a botimize key
+## Create a botimize account
 
 
-## Create your bot
-
-### python script
+## Create a python bot
 
 Create a python file (e.g. botimize_echo.py) and copy this into it. Notice your have to replace **Your_Facebook_Access_Token** and **Your_Botimize_Api_Key**.
 
@@ -105,14 +101,14 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-### Procfile
+## Create Procfile for heroku
 
 Create a Procfile and copy this into it. Notice you have to replace **botimize_echo** with your python file name.
 ```
 web: gunicorn botimize_echo:app --log-file=-
 ```
 
-### Commit to heroku
+## Commit to heroku
 
 ```
 git init
