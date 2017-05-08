@@ -15,7 +15,7 @@ Sign up an heroku account at https://www.heroku.com.
 
 ## Set up the dependency
 
-Create a requirements.txt with following lines in the requirements.txt
+Create a requirements.txt and copy this into it.
 ```
 apiai==1.2.3
 appdirs==1.4.3
@@ -44,19 +44,25 @@ pip install -r requirements.txt
 ```
 
 ## Create your Facebook App and Page
+
 First, go to [facebook developer dashboard](https://developers.facebook.com/apps)
-Click **+Add a New App**
+Click [create new app](/demo/create_new_app.png) to create a new app or **Add new app** if you already have some apps exsiting.
 
-In the project dashboard, click **+Add Project** and click **Messagner**.
+In the project dashboard, click [Add project](/demo/add_project.png)
 
-Second, generage your Your_Facebook_Access_Token by selecting a page (if you don't have a facebook page then create one).
+Then click [Messange get start](/demo/get_start.png)
+
+Generate [Your_Facebook_Access_Token](/demo/generate_token.png)
+
+Keep this very long **Facebook_Access_Token** in a notebook, very important!
 
 ## Create a botimize account
 
 
 ## Create a python bot
 
-Create a python file (e.g. botimize_echo.py) and copy this into it. Notice your have to replace **Your_Facebook_Access_Token** and **Your_Botimize_Api_Key**.
+Create a python file (e.g. botimize_echo.py) and copy this into it. 
+Notice your have to replace **Your_Facebook_Access_Token** and **Your_Botimize_Api_Key**.
 
 ```
 import os
@@ -103,7 +109,8 @@ if __name__ == '__main__':
 
 ## Create Procfile for heroku
 
-Create a Procfile and copy this into it. Notice you have to replace **botimize_echo** with your python file name.
+Create a Procfile and copy this into it.
+Notice you have to replace **botimize_echo** with your python file name.
 ```
 web: gunicorn botimize_echo:app --log-file=-
 ```
