@@ -50,18 +50,27 @@ Click [create new app](/demo/create_new_app.png) to create a new app or **Add ne
 
 In the project dashboard, click [Add project](/demo/add_project.png)
 
-Then click Messagner get start
+Then click **Messagner get start**
 
 ![Messange get start](/demo/get_start.png)
 
-Generate facebook_access_token
+Generate **facebook_access_token**
 
 ![Your_Facebook_Access_Token](/demo/generate_token.png)
 
 Keep this very long **Facebook_Access_Token** in a notebook, very important!
 
-## Create a botimize account
+## Create a botimize account and a key for the project
 
+Go to [botimize](https://dashboard.botimize.io/register) and create an account.
+
+Create a new project by clicking new project.
+
+![New_project](/demo/botimize_new_project.png)
+
+See your **Your_Botimize_Api_Key** by clicking Project Setting
+
+![Project Setting](demo/botimize_apiKey.png)
 
 ## Create a python bot
 
