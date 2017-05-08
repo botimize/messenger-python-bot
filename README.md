@@ -50,9 +50,13 @@ Click [create new app](/demo/create_new_app.png) to create a new app or **Add ne
 
 In the project dashboard, click [Add project](/demo/add_project.png)
 
-Then click [Messange get start](/demo/get_start.png)
+Then click Messagner get start
 
-Generate [Your_Facebook_Access_Token](/demo/generate_token.png)
+![Messange get start](/demo/get_start.png)
+
+Generate facebook_access_token
+
+![Your_Facebook_Access_Token](/demo/generate_token.png)
 
 Keep this very long **Facebook_Access_Token** in a notebook, very important!
 
