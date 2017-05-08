@@ -10,10 +10,11 @@ Messanger uses the web server to receive and send the message(text, emoji, pic).
 
 You can easily git clone the whole project, setting up the dependency by running ```pip install -r requirements.txt```, and run the server somewhere else e.g. heroku.
 
-### Build a server 
-1. Sign up an heroku account at https://www.heroku.com.
+## Create heroku account and setup dependency
 
-2. Set up the dependency
+### Sign up an heroku account at https://www.heroku.com.
+
+### Set up the dependency
 
 Create a requirements.txt with following lines in the requirements.txt
 ```
@@ -43,20 +44,23 @@ Install package by running
 pip install -r requirements.txt
 ```
 
-3. Create your facebook app and page
-
+## Create Facebook App
+Create your facebook app and page
 First, go to [facebook developer dashboard](https://developers.facebook.com/apps)
-
 Click **+Add a New App**
 
 In the project dashboard, click **+Add Project** and click **Messagner**.
 
 Second, generage your Your_Facebook_Access_Token by selecting a page (if you don't have a facebook page then create one).
 
-4. Create Your_Botimize_Api_Key
+## Create a botimize account and generate a botimize key
 
 
-5. Create a python file (e.g. botimize_echo.py) and copy this into it. Notice your have to replace **Your_Facebook_Access_Token** and **Your_Botimize_Api_Key**.
+## Create your bot
+
+### python script
+
+Create a python file (e.g. botimize_echo.py) and copy this into it. Notice your have to replace **Your_Facebook_Access_Token** and **Your_Botimize_Api_Key**.
 
 ```
 import os
@@ -101,12 +105,15 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-6. Create a Procfile and copy this into it. Notice you have to replace **botimize_echo** with your python file name.
+### Procfile
+
+Create a Procfile and copy this into it. Notice you have to replace **botimize_echo** with your python file name.
 ```
 web: gunicorn botimize_echo:app --log-file=-
 ```
 
-7. Commit the code to the heroku
+### Commit to heroku
+
 ```
 git init
 git add .
@@ -115,4 +122,5 @@ heroku create
 git push heroku master
 ```
 
-8. Update the webhook url with heroku webhook.
+## Talk to your bot
+Update the webhook url with heroku webhook.
