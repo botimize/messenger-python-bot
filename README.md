@@ -57,6 +57,7 @@ Second, generage your Your_Facebook_Access_Token by selecting a page (if you don
 
 
 5. Create a python file (e.g. botimize_echo.py) and copy this into it. Notice your have to replace **Your_Facebook_Access_Token** and **Your_Botimize_Api_Key**.
+
 ```
 import os
 import requests
@@ -64,9 +65,9 @@ from botimize import Botimize
 from flask import Flask, request
 app = Flask(__name__)
  
-FACEBOOK_ACCESS_TOKEN = 'Your_Facebook_Access_Token'
-Botimize_Api_Key = 'Your_Botimize_Api_Key'
-botimize = Botimize(Botimize_Api_Key, 'facebook')
+FACEBOOK_ACCESS_TOKEN = "Your_Facebook_Access_Token"
+Botimize_Api_Key = "Your_Botimize_Api_Key"
+botimize = Botimize(Botimize_Api_Key, "facebook")
  
 def reply(user_id, msg):
     data = {
