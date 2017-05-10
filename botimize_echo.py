@@ -18,28 +18,24 @@ def verify():
         if not request.args.get("hub.verify_token") == os.environ["VERIFY_TOKEN"]:
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
-
     return "Hello world", 200
-
 
 @app.route('/', methods=['POST'])
 def webhook():
-    # endpoint for processing incoming messaging events
-    data = request.get_json()
-    botimize.log_incoming(data)
-
+    data = request.get_json() # receive the message from facebook
+    botimize.log_incoming(data) # send incoming message to botimize
     if data["object"] == "page":
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
-                if messaging_event.get("message"):  # someone sent us a message
-                    message_text = messaging_event["message"]["text"]  # the message's text
-                    send_message(sender_id, message_text)
+                if messaging_event.get("message"):
+                    message_text = messaging_event["message"]["text"]
+                    send_message(sender_id, message_text) # send response message to facebook
                     data_out = {
                         "access_token": FACEBOOK_ACCESS_TOKEN,
                         "message": messaging_event["message"],
                         "recipient": messaging_event["sender"]
                     }
-                    botimize.log_outgoing(data_out)
+                    botimize.log_outgoing(data_out) # send outgoging message to botimize
                 else:
                     pass
     return "ok", 200
