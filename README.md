@@ -48,7 +48,9 @@ pip install -r requirements.txt
 First, go to [facebook developer dashboard](https://developers.facebook.com/apps)
 Click [create new app](/demo/create_new_app.png) to create a new app or **Add new app** if you already have some apps exsiting.
 
-In the project dashboard, click [Add project](/demo/add_project.png)
+In the project dashboard, click 
+
+![Add project](/demo/add_project.png)
 
 Then click **Messagner get start**
 
@@ -74,7 +76,8 @@ See your **Your_Botimize_Api_Key** by clicking Project Setting
 
 ## Create a python bot
 
-Create a python file (e.g. botimize_echo.py) and copy this into it. 
+Create a python script (e.g. botimize_echo.py) and copy this into it. 
+
 Notice your have to replace **Your_Facebook_Access_Token** and **Your_Botimize_Api_Key**.
 
 ```
@@ -144,7 +147,8 @@ if __name__ == '__main__':
 ## Create Procfile for heroku
 
 Create a Procfile and copy this into it.
-Notice you have to replace **botimize_echo** with your python file name.
+
+Notice you have to replace **botimize_echo** with your python script name.
 ```
 web: gunicorn botimize_echo:app --log-file=-
 ```
@@ -158,8 +162,8 @@ git commmit -m "create a heroku project"
 heroku create
 git push heroku master
 ```
-
-Record the https://your_app_name.herokuapp.com url.
+There will show a heroku-url on screen after you push to heroku.
+Keep this Url (e.g. https://your_app_name.herokuapp.com).
 
 ## Talk to your bot
 
