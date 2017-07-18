@@ -172,6 +172,6 @@ Your password for the webhook is **testbot_verify_token** which shows in the upp
 er python script.
 
 Set up the webhook by pasting https://your_app_name.herokuapp.com into the field and subscribe to your page.
-![webhook](/demo/webhook.png)
+![webhook](/demo/webhook_token.png)
 
 Now you can talk to your bot!
