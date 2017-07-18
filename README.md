@@ -17,7 +17,6 @@ Sign up an heroku account at https://www.heroku.com.
 
 Create a requirements.txt and copy this into it.
 ```
-apiai==1.2.3
 appdirs==1.4.3
 botimize==1.1
 certifi==2017.4.17
@@ -98,7 +97,7 @@ botimize = Botimize(Botimize_Api_Key, 'facebook')
 @app.route('/', methods=['GET'])
 def verify():
     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
-        if not request.args.get("hub.verify_token") == os.environ["VERIFY_TOKEN"]:
+        if not request.args.get("hub.verify_token") == os.environ["testbot_verify_token"]:
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
     return "Hello world", 200
@@ -110,7 +109,7 @@ def webhook():
     if data["object"] == "page":
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
-                if messaging_event.get("message"):
+                if messaging_event.get("message") and messaging_event["message"].get("text"):
                     message_text = messaging_event["message"]["text"]
                     send_message(sender_id, message_text) # send response message to facebook
                     data_out = {
@@ -167,6 +166,12 @@ Keep this Url (e.g. https://your_app_name.herokuapp.com).
 
 ## Talk to your bot
 
+Set up the webhook by pasting https://your_app_name.herokuapp.com into the field
+ and subscribe to your page.
+Your password for the webhook is **testbot_verify_token** which shows in the upp
+er python script.
+
 Set up the webhook by pasting https://your_app_name.herokuapp.com into the field and subscribe to your page.
 ![webhook](/demo/webhook.png)
+
 Now you can talk to your bot!
