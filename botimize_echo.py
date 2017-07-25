@@ -29,6 +29,7 @@ def webhook():
             for messaging_event in entry["messaging"]:
                 if messaging_event.get("message") and messaging_event["message"].get("text"):
                     message_text = messaging_event["message"]["text"]
+                    sender_id =  messaging_event["sender"]["id"]
                     send_message(sender_id, message_text) # send response message to facebook
                     data_out = {
                         "access_token": FACEBOOK_ACCESS_TOKEN,
