@@ -172,4 +172,5 @@ Your password for the webhook is **testbot_verify_token** which shows in the upp
 Set up the webhook by pasting https://your_app_name.herokuapp.com into the field and subscribe to your page.
 ![webhook](/demo/webhook_token.png)
 
-Now you can talk to your bot!
+Now you can talk to your bot by clicking the "Send Message" on the fan page of the facebook.
+![fanPage](/demo/talk2Bot.png)
