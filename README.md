@@ -79,7 +79,7 @@ Create a python script (e.g. botimize_echo.py) and copy this into it.
 
 Notice your have to replace **Your_Facebook_Access_Token** and **Your_Botimize_Api_Key**.
 
-```
+```python
 import os
 import sys
 import json
